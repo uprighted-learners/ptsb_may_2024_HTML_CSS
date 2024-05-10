@@ -7,6 +7,13 @@
 */
 
 p,h1 {
+    /* In CSS there are 3 ways to refer to a color
+    
+        - green, blue, steelblue, orangered
+        - RGB  - rgb(0-255,0-255,0-255)
+        - Hex Values - #002255
+    
+    */
     color: blue;
 }
 
@@ -16,5 +23,81 @@ body {
     background: url(https://images.unsplash.com/photo-1714547509046-0cf60126f331?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
     background-position: center;
     background-size: cover;
+}
 
+
+/* To target multiple HTML elements and to style them, utilize a class,
+    to target a class in CSS, you denote a "." followed by the class name
+*/
+
+.header {
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-decoration: underline;
+}
+
+/* To target an id, we will use the # symbol, used mainly for targeting 1 element */
+ 
+#unique {
+    background-color: pink;
+    color: olivedrab;
+    border-radius: 25px;
+}
+
+nav {
+    text-align: center;
+    background-color: teal;
+    padding: 1em;
+}
+
+nav .btn {
+    background-color: yellow;
+}
+
+/* CSS Hierarchy 
+
+        The order of priority from weakest to strongest is:
+            External Stylesheet:
+                - Element
+                - Class
+                - ID
+
+            Internal Stylesheet:
+                - Element
+                - Class
+                - ID
+
+            Inline styling
+                - !important
+
+            external stylesheet is a .css file which is not the .html file itself
+            internal stylesheet is css written within the html file
+            inline styling is when i add a "style" attribute to an element in my .html file
+
+
+            Order of specificity:
+                1. !important
+                2. in-style style
+                3. id
+                4. class
+                5. element
+*/
+
+#oos-id{
+    background-color: teal ;
+}
+
+.oos-class{
+    background-color: white ;
+}
+
+
+h3 {
+    height: 3em;
+    margin: 1em;
+    border: 2px solid black;
+    background-color: red !important;
+    font-size: 2em;
 }
