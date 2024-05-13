@@ -1,0 +1,93 @@
+/* 
+CSS Positions
+
+? Static
+* default
+* positioned in relation to it's elements
+* top, bottom, left, right, z-index have NO EFFECT
+
+? Relative
+* just like static
+* can change the values of top, bottom, left, right, z-index
+* values are relative to its original static position
+
+? Absolute
+* remove the element from the flow
+* positions it relative to its parent container
+* if parent is static, it will move outside of the parent container
+* if parent is relative, it will move within the parent container
+* positioning defined by top, bottom, left, right, z-index
+
+? Fixed
+* like absolute
+* positioned to the viewport
+* doesn't move when scrolling
+* positions defined by top, bottom, left, right, z-index
+
+? Sticky 
+* mix of relative and fixed
+* relative to the flow of the document
+* position defined used for when you start scrolling
+* stays fixed when scrolling; relative when stationary
+*/
+
+
+body {
+    height: 250vh;
+}
+
+.parent-container {
+    background-color: beige;
+    border: 2px solid black;
+    width: 75vw;
+    /* Increase height, to see the effects of the 'sticky' element */
+    /* height: 80vh; */
+    padding: 5px;
+    position: relative;
+}
+
+.child {
+    padding: 25px;
+}
+
+.child1 {
+    border: 2px solid red;
+    background: red;
+    /* The property of 'right' has no effect, because this element has the default position of 'static' */
+    /* right: 200px; */
+
+}
+
+.child2 {
+    border: 2px solid blueviolet;
+    background-color: blueviolet;
+    position: relative;
+    /* Position properties work on an element with the position of 'relative' */
+    /* right: 200px; */
+    /* bottom: 40px; */
+}
+
+.child3{ 
+    border: 2px solid green;
+    background-color: green;
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+}
+
+.child4 {
+    border: 2px solid teal;
+    background-color: teal;
+    /* Will escape the 'flow' of the document and remin in view for the entire page. similar to absolute positioning. */
+    /* position: fixed; */
+    z-index: 1;
+    top: 0;
+}
+
+.child5 {
+    border: 2px solid grey;
+    background-color: grey;
+    /* Will remain in 'flow' of the document, and remain in view for its container  */
+    position: sticky;
+    top: 0px;
+}
