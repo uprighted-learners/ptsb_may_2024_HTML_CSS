@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;  
+    gap: 1em; 
+}
+
+nav {
+    background-color: rgb(87,107,220);
+
+    /* initialize flex on container */
+    display: flex;
+    /* Allows us to control whether or not we want the items to be in a row or column */
+    flex-direction: row;
+
+    justify-content: flex-end;
+    padding: 1em;
+    /* Allows us to provide some spacing between elements */
+    gap: 1em;
+
+}
+
+.main-container {
+     margin-top: 3em;
+     border: 2px solid black;
+     width: 100vw;
+     height: 900px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 3em;
+     flex-wrap: wrap;
+
+
+}
+
+
+.c {
+    width: 200px;
+    height: 100px;
+    min-width: 200px;
+    min-height: 10px;
+}
+
+.c1 {
+    border: 2px solid red;
+}
+.c2 {
+    border: 2px solid blue;
+}
+.c3 {
+    border: 2px solid orange;
+}
+.c4 {
+    border: 2px solid magenta;
+}
+.c5 {
+    border: 2px solid chocolate;
+}
+
+
+.article-preview {
+    margin-top: 1em;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.article-preview img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.article-preview .text {
+    max-width: 400px;
+}
