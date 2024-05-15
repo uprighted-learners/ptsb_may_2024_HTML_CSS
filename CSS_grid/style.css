@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+}
+
+h3 {
+    border: 1px solid purple;
+    background-color: crimson;
+    padding: .3em;
+    margin: 0;
+}
+
+
+.grid_basics {
+    /* By default a grid will be in rows */
+    /* Spans across the whole container */
+    display: grid;
+    /* display: inline-grid; */
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+.grid_explicit {
+    display: grid;
+    /* grid-template-columns: 90px 50px 100px; */
+    /* grid-template-rows: 2fr 1fr 3fr */
+
+    /* grid-template-columns: repeat(2,1fr); */
+
+    grid-template-columns: repeat("auto-fill", minmax(170px, 1fr));
+
+    grid-template-rows: repeat(1, 100px)
+
+}
+
+.grid_span {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4,100px)
+}
+
+
+.item1 {
+    background-color: green;
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+.item2 {
+    background-color: pink;
+    grid-row: span 2;
+    grid-column:span 4; 
+}
+
+.item3 {
+    background-color: yellow;
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+.item4 {
+    background-color: teal;
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.grid_template{
+    display: grid;
+    width: 100%;
+    grid-template-columns: .4fr 3fr;
+    grid-template-rows: 50px 15em 3em;
+    grid-template-areas: 
+    "head head"
+    "navigation main"
+    "footer footer"
+    
+} 
+
+header {
+    background-color: blue;
+    grid-area: head;
+}
+
+nav {
+    background-color: green;
+    grid-area: navigation;
+}
+
+main {
+    background-color:  red;
+    grid-area: main;
+}
+
+footer {
+    background-color: yellow;
+    grid-area: footer;
+}
+ 
