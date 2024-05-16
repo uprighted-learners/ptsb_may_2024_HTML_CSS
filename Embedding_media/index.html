@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedding Media</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgrey;
+      }
+
+      img {
+        width: 30em;
+        height: 20em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        Purpose:
+            - Videos can be useful to provide information
+            - Images can make your site more enjoyable
+            - Maps can help potential customers route to "your" store
+
+        Types: 
+            - Media
+            - Other HTML
+            - Ads
+            - Maps, graphs, etc.
+     -->
+
+    <img
+      src="https://imgs.search.brave.com/CvCz_h9vCKmD2oJ6HfxOPXclrQSLiS_7t-caNAfkAc8/rs:fit:1200:1000:1/g:ce/aHR0cDovL3d3dy5l/bWFnaWRsYS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTMv/MTAvaHRtbDUucG5n"
+      alt="image"
+    />
+
+    <!-- 
+        Common files:
+                - jpg/jpeg
+                    - common
+                    - no transparency
+                    - pixel based
+                - png 
+                    - raster based
+                    - support transparency
+                - svg 
+                    - scalable vector graphic
+                    - vector based
+                    - scales indefinitely 
+    
+    
+    -->
+
+    <iframe
+      src="https://www.december.com/html/spec/HTML5-Cheat-Sheet.pdf"
+      title="HTML Cheatsheet"
+      frameborder="0"
+      height="500"
+      width="800"
+    >
+    </iframe>
+    <!-- 
+        - Can take longer to load
+        - used to embed other documents
+        - common to use for videos from dedicated hosts (Youtube, Vimeo)
+
+
+
+     -->
+
+    <video width="400" height="200" controls>
+      <source src="#mp4" type="video/mp4" />
+      <p>Error loading video</p>
+    </video>
+
+    <audio autoplay="false" controls muted="true">
+      <source src="#audio.mp3" type="audio/mp3" />
+      <source src="#audio.ogg" type="audio/ogg" />
+      <p>Error loading audio</p>
+    </audio>
+
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-73.2130900,44.4749000,-73.2102500,44.4772200&layer=mapnik"
+      frameborder="0"
+      title="Upright Address Location"
+      width="400"
+      height="300"
+    >
+    </iframe>
+
+    <iframe
+      width="425"
+      height="350"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-88.44818115234376%2C41.61030862727467%2C-87.40447998046876%2C42.05592075351244&amp;layer=mapnik"
+      style="border: 1px solid black"
+    ></iframe
+    ><br /><small
+      ><a href="https://www.openstreetmap.org/#map=11/41.8335/-87.9263"
+        >View Larger Map</a
+      ></small
+    >
+  </body>
+</html>
